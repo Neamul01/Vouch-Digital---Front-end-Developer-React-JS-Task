@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Drawer, Button, Menu } from "antd";
-import "../../App.css";
+import "./Navbar.css";
 
 
 const Navbar = () => {
@@ -13,11 +13,11 @@ const Navbar = () => {
             </div>
             <div className="menuCon">
                 <Menu className="rightMenu">
-                    <Menu.Item key='signin'>
-                        <a href="!#">Signin</a>
+                    <Menu.Item key='signin' >
+                        <button className="customButton" style={{ backgroundColor: '#1c1c2f' }}>Start From Trial</button>
                     </Menu.Item>
                     <Menu.Item key='login'>
-                        <a href="!#">Login</a>
+                        <button className="customButton" style={{ backgroundColor: 'orange' }}>Login</button>
                     </Menu.Item>
                 </Menu>
                 <Button className="barsMenu" type="secondary" onClick={() => setVisible(true)}>
