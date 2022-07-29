@@ -14,10 +14,10 @@ const Navbar = () => {
             <div className="menuCon">
                 <Menu className="rightMenu">
                     <Menu.Item key='signin' >
-                        <button className="customButton" style={{ backgroundColor: '#1c1c2f' }}>Start From Trial</button>
+                        <button className="customButton" style={{ backgroundColor: '#023047' }}>Start From Trial</button>
                     </Menu.Item>
                     <Menu.Item key='login'>
-                        <button className="customButton" style={{ backgroundColor: 'orange' }}>Login</button>
+                        <button className="customButton" style={{ backgroundColor: '#fb8500' }}>Login</button>
                     </Menu.Item>
                 </Menu>
                 <Button className="barsMenu" type="secondary" onClick={() => setVisible(true)}>

@@ -6,14 +6,10 @@ const Login = () => {
     return (
         <div>
             <Layout>
-                <Header>
-
-                </Header>
                 <Layout>
                     <Sider>Sider</Sider>
                     <Content>Content</Content>
                 </Layout>
-                <Footer>Footer</Footer>
             </Layout>
         </div>
     );
