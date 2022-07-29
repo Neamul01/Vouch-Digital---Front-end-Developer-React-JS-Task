@@ -1,3 +1,5 @@
+/* navbar  */
+
 .menuBar {
     padding: 0 20px;
     border-bottom: solid 1px #e8e8e8;
@@ -7,6 +9,8 @@
     max-height: 1080px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* first part or logo area  */
 
 .logo {
     width: 150px;
@@ -21,6 +25,8 @@
     color: black;
     font-weight: bold;
 }
+
+/* second part or main area  */
 
 .menuCon {
     width: calc(100% - 150px);
@@ -58,6 +64,8 @@
     float: right;
 }
 
+/* item style  */
+
 .rightMenu {
     display: flex;
 }
@@ -75,6 +83,8 @@
     background: none;
 }
 
+/* responsive button bar  */
+
 .barsBtn {
     display: block;
     width: 20px;
@@ -87,6 +97,8 @@
     top: auto;
     bottom: -6px;
 }
+
+/* ant design  */
 
 .ant-drawer-body {
     padding: 0;
@@ -106,6 +118,8 @@
     border-bottom-color: transparent;
 }
 
+/* button custom style  */
+
 .customButton {
     border: none;
     outline: none;
@@ -113,6 +127,8 @@
     width: 12rem;
     color: white;
 }
+
+/* responsive menu  */
 
 @media (max-width: 767px) {
     .barsMenu {

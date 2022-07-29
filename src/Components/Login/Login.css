@@ -1,0 +1,23 @@
+.login-page {
+    margin: 0 3rem;
+}
+
+.login-form-area {
+    padding: 3rem 3rem;
+}
+
+.login-title {
+    text-align: center;
+}
+
+.login-form {}
+
+.ant-form-item-row .ant-col {
+    width: 100%;
+}
+
+/* cover pic area  */
+.cover-div {
+    height: 80vh;
+    background-color: #023047;
+}
