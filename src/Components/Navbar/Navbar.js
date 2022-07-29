@@ -1,43 +1,42 @@
 import React, { useState } from "react";
-import LeftMenu from "./Left";
-import RightMenu from ".Rright";
-import { Drawer, Button } from "antd";
-import "antd/dist/antd.css";
-import "../src/app.css";
+import { Drawer, Button, Menu } from "antd";
+import "../../App.css";
 
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const showDrawer = () => {
-        setVisible(true);
-    };
-    const onClose = () => {
-        setVisible(false)
-    };
+
     return (
         <nav className="menuBar">
             <div className="logo">
-                <a href="www.marca.com">logo</a>
+                <a href="!#">ATools<span style={{ color: 'red', fontWeight: 'bold' }}>.</span></a>
             </div>
             <div className="menuCon">
-                <div className="leftMenu">
-                    <LeftMenu />
-                </div>
-                <div className="rightMenu">
-                    <RightMenu />
-                </div>
-                <Button className="barsMenu" type="primary" onClick={showDrawer}>
+                <Menu className="rightMenu">
+                    <Menu.Item key='signin'>
+                        <a href="!#">Signin</a>
+                    </Menu.Item>
+                    <Menu.Item key='login'>
+                        <a href="!#">Login</a>
+                    </Menu.Item>
+                </Menu>
+                <Button className="barsMenu" type="secondary" onClick={() => setVisible(true)}>
                     <span className="barsBtn" />
                 </Button>
                 <Drawer
-                    title="Basic Drawer"
+                    // title="Basic Drawer"
                     placement="right"
                     closable={false}
-                    onClose={onClose}
+                    onClose={() => setVisible(false)}
                     visible={visible}
                 >
-                    <LeftMenu />
-                    <RightMenu />
+                    <>
+                        <Menu>
+                            <Menu.Item key={'home'}>
+                                <a href="!#">Home</a>
+                            </Menu.Item>
+                        </Menu>
+                    </>
                 </Drawer>
             </div>
         </nav>
