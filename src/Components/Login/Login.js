@@ -11,7 +11,7 @@ const Login = () => {
     return (
         <div className='login-page'>
             <Layout>
-                <Row gutter={4}>
+                <Row className='ant-row-custom' gutter={4}>
                     <Col className='login-form-area' span={9}>
                         <div className="login-title">
                             <h2>Welcome Back</h2>
@@ -68,7 +68,7 @@ const Login = () => {
                             </Form.Item>
                         </Form>
                     </Col>
-                    <Col span={15}>
+                    <Col className='cover-area-span' span={15}>
                         <div className='cover-div'>
 
                         </div>

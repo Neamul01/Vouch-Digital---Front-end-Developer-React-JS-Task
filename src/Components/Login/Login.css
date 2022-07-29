@@ -2,6 +2,11 @@
     margin: 0 3rem;
 }
 
+.ant-row-custom {
+    justify-content: center;
+    align-items: center;
+}
+
 .login-form-area {
     padding: 3rem 3rem;
 }
@@ -57,7 +62,8 @@
 }
 
 /* cover pic area  */
+
 .cover-div {
-    height: 80vh;
+    height: 100vh;
     background-color: #023047;
 }
