@@ -10,10 +10,50 @@
     text-align: center;
 }
 
-.login-form {}
+.login-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
 
-.ant-form-item-row .ant-col {
+.login-form {
+    padding: 1rem 6rem !important;
+}
+
+/* font input  */
+.ant-input {
+    padding: 0.5rem 1rem;
+}
+
+/* below area of form  */
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: black !important;
+    border: none;
+}
+
+.login-form-forgot {
+    float: right;
+    color: #023047;
+}
+
+.login-form-button {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #023047;
+    border: none;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+}
+
+.login-form-button span {
+    font-weight: bold;
+}
+
+.login-form-button:hover {
+    background-color: #023047;
 }
 
 /* cover pic area  */
