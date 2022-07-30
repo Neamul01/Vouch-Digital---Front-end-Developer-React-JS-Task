@@ -47,7 +47,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #023047;
+    background-color: #023047 !important;
+    border-color: none !important;
     border: none;
     height: 2.5rem !important;
     padding: 1rem !important;
@@ -66,4 +67,29 @@
 .cover-div {
     height: 100vh;
     background-color: #023047;
+}
+
+/* responsive for mobile  */
+
+@media screen and (max-width:768px) {
+
+    /* ant design overlape  */
+    .ant-col-9 {
+        flex: 0 0 82.5% !important;
+        max-width: 80vw !important;
+    }
+
+    /* custom design overlape  */
+    .login-form-area {
+        width: 100vw !important;
+        padding: 1rem 0;
+    }
+
+    .login-form {
+        padding: 0 !important;
+    }
+
+    .cover-img-area {
+        display: none !important;
+    }
 }

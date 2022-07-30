@@ -85,7 +85,7 @@ const Login = () => {
                             </Form.Item>
                         </Form>
                     </Col>
-                    <Col span={15}>
+                    <Col className='cover-img-area' span={15}>
                         <div className='cover-div'>
 
                         </div>
