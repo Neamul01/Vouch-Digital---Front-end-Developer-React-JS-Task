@@ -1,10 +1,26 @@
 import React from 'react';
-import { Card, Col, Layout, Row, Checkbox, Form, Input, Button } from 'antd';
+import { Col, Layout, Row, Checkbox, Form, Input, Button, message } from 'antd';
 import './Login.css'
 
 const Login = () => {
     const onFinish = (values) => {
-        console.log('Success:', values);
+        console.log(values.email, values.password);
+        fetch("https://reqres.in/api/login", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                data: {
+                    "email": values.email,
+                    "password": values.password
+                }
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                data.error && message.error(data.error);
+                data.token && message.success('Login Succed...!!')
+            })
     };
 
 
@@ -26,29 +42,30 @@ const Login = () => {
                             onFinish={onFinish}
                         >
                             <Form.Item
-                                name="username"
+                                name="email"
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please input your Username!',
+                                        type: 'email',
+                                        message: 'Please input your Email!',
                                     },
                                 ]}
                             >
-                                <Input placeholder="Username" />
+                                <Input placeholder="Email Address*" />
                             </Form.Item>
                             <Form.Item
                                 name="password"
                                 rules={[
                                     {
-                                        required: true,
+                                        // required: true,
+                                        type: 'password',
                                         message: 'Please input your Password!',
                                     },
                                 ]}
                             >
                                 <Input
-
                                     type="password"
-                                    placeholder="Password"
+                                    placeholder="Password*"
                                 />
                             </Form.Item>
                             <Form.Item>
@@ -68,7 +85,7 @@ const Login = () => {
                             </Form.Item>
                         </Form>
                     </Col>
-                    <Col className='cover-area-span' span={15}>
+                    <Col span={15}>
                         <div className='cover-div'>
 
                         </div>
